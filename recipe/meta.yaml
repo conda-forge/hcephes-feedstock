@@ -1,6 +1,6 @@
 {% set name = "hcephes" %}
-{% set version = "0.2.2" %}
-{% set sha256 = "0c5f120750d992bcbadae8de6f1715e0cacf5819bb23e682e4f080fe92ff5cb1" %}
+{% set version = "0.2.3" %}
+{% set sha256 = "dc58d0e3c0a3a4c7b98a6fb99597d383d204683a428b3f91905258d74e8e1171" %}
 
 package:
   name: {{ name|lower }}
