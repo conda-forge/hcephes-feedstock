@@ -1,6 +1,6 @@
 {% set name = "hcephes" %}
-{% set version = "0.1.6" %}
-{% set sha256 = "fe9954c19b507a8a1dc79737b2fb524b20167397c146e481db3b1a18fcfeba04" %}
+{% set version = "0.2.3" %}
+{% set sha256 = "dc58d0e3c0a3a4c7b98a6fb99597d383d204683a428b3f91905258d74e8e1171" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,6 @@ source:
 
 build:
   number: 0
-  skip: True  # [win32 or linux32 or (win64 and py27) or (win and py35)]
   features:
     - vc9   # [win and py27]
     - vc10  # [win and py34]
