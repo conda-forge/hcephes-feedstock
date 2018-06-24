@@ -14,14 +14,16 @@ Summary: Cephes library
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/hcephes-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/hcephes-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/hcephes-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/hcephes-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/hcephes-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/hcephes-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/hcephes-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/hcephes-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/hcephes-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/hcephes-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/hcephes-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/hcephes-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/hcephes/badges/version.svg)](https://anaconda.org/conda-forge/hcephes)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/hcephes/badges/downloads.svg)](https://anaconda.org/conda-forge/hcephes)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-hcephes-green.svg)](https://anaconda.org/conda-forge/hcephes) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/hcephes.svg)](https://anaconda.org/conda-forge/hcephes) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/hcephes.svg)](https://anaconda.org/conda-forge/hcephes) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/hcephes.svg)](https://anaconda.org/conda-forge/hcephes) |
 
 Installing hcephes
 ==================
