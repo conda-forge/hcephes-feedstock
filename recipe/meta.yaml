@@ -47,7 +47,7 @@ about:
   home: https://github.com/limix/hcephes
   license: MIT
   license_family: MIT
-  license_file: LICENSE.txt
+  license_file: LICENSE.md
   summary: 'Cephes library'
   doc_url: https://github.com/limix/hcephes
   dev_url: https://github.com/limix/hcephes
