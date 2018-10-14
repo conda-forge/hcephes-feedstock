@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Cephes library
+Summary: Netlib Cephes library
 
 
 
