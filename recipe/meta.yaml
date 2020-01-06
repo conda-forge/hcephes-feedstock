@@ -26,8 +26,6 @@ test:
     - test -e $PREFIX/lib/libhcephes.so                     # [linux]
     - test -e $PREFIX/include/hcephes.h                     # [unix]
     - test -e $PREFIX/lib/libhcephes.dylib                  # [osx]
-    - conda inspect linkages -p $PREFIX $PKG_NAME           # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME            # [osx]
     - if NOT exist %LIBRARY_LIB%/hcephes.lib exit 1         # [win]
     - if NOT exist %LIBRARY_BIN%/hcephes.dll exit 1         # [win]
     - if NOT exist %LIBRARY_INC%/hcephes.h exit 1           # [win]
