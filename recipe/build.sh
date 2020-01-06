@@ -1,10 +1,15 @@
 #!/bin/bash
-set -ex
 
-export CFLAGS="${CFLAGS} -O3 -fPIC"
-export LDFLAGS="${LDFLAGS} -Wl,-rpath,${PREFIX}/lib"
+set -ex
 
 mkdir build && cd build
 
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=$PREFIX $SRC_DIR
-make -j$CPU_COUNT && make test && make install
+cmake \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_INSTALL_PREFIX:PATH=$PREFIX \
+     -DBUILD_SHARED_LIBS=ON \
+     ..
+
+cmake --build . --config Release
+cmake --build . --config Release --target test
+cmake --build . --config Release --target install
