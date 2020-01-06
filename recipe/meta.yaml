@@ -1,6 +1,6 @@
 {% set name = "hcephes" %}
-{% set version = "0.3.3" %}
-{% set sha256 = "0d2c362e7817461c75a3b0c7d5f149cbf6a814f7ed4a8ec0a8c88f49bb843781" %}
+{% set version = "0.4.1" %}
+{% set sha256 = "82bae0311b347fd843f3cf45cbf96d3b3bd0157516cc372b99ccd2d8d4acdced" %}
 
 package:
   name: {{ name|lower }}
@@ -12,27 +12,24 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - cmake
-  host:
-    - conda-build
+    - ninja  # [win]
 
 test:
   commands:
     - test -e $PREFIX/lib/libhcephes.so                     # [linux]
-    - test -e $PREFIX/lib/libhcephes_static.a               # [unix]
     - test -e $PREFIX/include/hcephes.h                     # [unix]
     - test -e $PREFIX/lib/libhcephes.dylib                  # [osx]
     - conda inspect linkages -p $PREFIX $PKG_NAME           # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME            # [osx]
     - if NOT exist %LIBRARY_LIB%/hcephes.lib exit 1         # [win]
     - if NOT exist %LIBRARY_BIN%/hcephes.dll exit 1         # [win]
-    - if NOT exist %LIBRARY_LIB%/hcephes_static.lib exit 1  # [win]
     - if NOT exist %LIBRARY_INC%/hcephes.h exit 1           # [win]
 
 about:
@@ -41,7 +38,6 @@ about:
   license_family: MIT
   license_file: LICENSE.md
   summary: 'Netlib Cephes library'
-  doc_url: https://github.com/limix/hcephes
   dev_url: https://github.com/limix/hcephes
 
 extra:
